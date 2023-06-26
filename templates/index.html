@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,300;1,600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'stylesheets/style.css')}}">
+    <script type="text/javascript"  src="{{url_for('static', filename = 'scripts/script.js')}}"></script>
+    <title>Tourism Survey</title>
+</head>
+<body>
+    <header>        
+        <nav>
+            <div class="logo">
+                <a href="#">
+                    <div class="logo_item">
+                        <img src="{{url_for('static', filename = 'Images/logo_top.png')}}" alt="">
+                    </div>
+                    <div class="company">
+                        Dubis' Safaris
+                    </div>
+                </a>
+            </div>
+            <div class="survey">
+                <div class="survey_ic">
+                    <img 
+                    src="{{url_for('static', filename = 'Images/survey.png')}}" 
+                    alt=""
+                    onclick="getSurveyForm()">
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="hero">
+        <div class="image__text">
+            <div class="img_container">
+                <div class="hero_bcg">
+                    <img src="{{url_for('static', filename = 'Images/white_lion.png')}}" alt="">
+                </div>
+            </div>
+            <div class="text__container">
+                <div class="header">Visit Serengeti!</div>
+                <div class="text">
+                    <p>In the Serengeti, lions can be seen roaming the grassy plains, 
+                        resting under the shade of acacia trees, or hunting for prey. 
+                        They are formidable predators and primarily feed on large herbivores
+                        such as wildebeests, zebras, and gazelles, which are abundant in the Serengeti.
+                    </p>
+                </div>
+                <div class="btn__container">
+                    <button class="btn" onclick="openForm()">Learn more</button>
+                    <span class="linear"></span>
+                </div>
+            </div>
+        </div>
+        <div class="arrow__container">
+            <img src="{{url_for('static', filename = 'Images/down_arrow.png')}}" alt="">
+        </div>
+    </div>
+    <!-- Survey Form -->
+    <div class="survey__container">
+        <div class="form__container">
+            <div class="form__header">
+                <h2 class="form__h2">
+                    Please share you experience
+                </h2>
+                <span class="form__ic">
+                    <img 
+                    src="{{url_for('static', filename = 'Images/cancel_ic.png')}}" 
+                    alt=""
+                    onclick="closeForm()">
+                </span>
+            </div>
+            <div class="form__contents">
+                <form action="http://127.0.0.1:5000/" class="survey__form" method="post">
+                    <div>
+                        <input
+                        input type="text" 
+                        placeholder="Your firstname"
+                        name="firstname"
+                        />
+                    </div>
+                    <div>
+                        <input
+                        input type="text" 
+                        placeholder="Your lastname"
+                        name="lastname"
+                        />
+                    </div>
+                    <div>
+                        <textarea value="Please list places visited" name="visits">
+                        </textarea>
+                    </div>
+                    <div>
+                        <span class="recommend__text">
+                            Would you recommend someone to visit our national parks
+                        </span>
+                        <input type="radio" name="response" id="" value="Yes">Yes
+                        <input type="radio" name="response" id="" value="No">No
+                    </div>
+                    <div class="image__container__file">
+                        <input type="file" class="image__loc" name="image">
+                        <span class="img__loc">
+                            Enter image of your favorite location
+                        </span>
+                    </div>
+                    <div>
+                        <input
+                        input type="text" 
+                        placeholder="Time of visit example [2 month or 1 year]"
+                        name="time"
+                        />
+                    </div>
+                    <div>
+                        <input
+                        input type="text" 
+                        placeholder="Country of origin"
+                        name="country"
+                        />
+                    </div>
+                    <div>
+                        <input
+                        input type="text" 
+                        placeholder="City of origin"
+                        name="city"
+                        />
+                    </div>
+                    <div>
+                        <input
+                        input type="email" 
+                        placeholder="Your email here"
+                        name="email"
+                        />
+                    </div>
+                    <div>
+                        <textarea 
+                        value="Please list places visited" 
+                        name="comments"
+                        class="comments">
+                        </textarea>
+                    </div>
+                    <div class="btn__container__form">
+                        <button class="btn__form" onclick="sendForm()">Send</button>
+                        <span class="linear"></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

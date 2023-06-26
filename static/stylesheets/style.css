@@ -1,0 +1,300 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+body{
+    position: relative;
+    width: 100%;
+    height: 132vh;
+    display: flex;
+    flex-direction: column;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    height: 15vh;
+    width: 100%;
+}
+nav{
+    width: 100%;
+    height: 12vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    width: 200px;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero{
+    position: relative;
+    width: 100%;
+    height: 120vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.image__text{
+    display: flex;
+    width: 100%;
+    height: 115vh;
+}
+.logo_item{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: flex-end;
+}
+.logo > a{
+    text-decoration: none;
+    color: #45985B;
+}
+.logo .company{
+    font-size: 10px;
+    left: 5px;
+}
+.survey{
+    width: 200px;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.survey_ic > img:hover{
+    cursor: pointer;
+}
+/* Hero section */
+.img_container{
+    display: flex;
+    width: 70%;
+    height: 110vh;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+.hero_bcg{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 104vh;
+    background: url(/static/Images/sssplatter.svg);
+    object-fit: contain;
+    background-repeat: no-repeat;
+}
+
+.hero_bcg > img{
+    position: absolute;
+    width: 57%;
+    height: 65%;
+    top: 150px;
+    left: 100px;
+}
+.text__container{
+    width: 45%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.text__container .header{
+    font-size: 3.8rem;
+    text-align: start;
+    font-weight: 700;
+    color: #45985B;
+    margin-top: 50px;
+}
+.text__container .text > p{
+    font-weight: 300;
+    font-size: 1.3em;
+    margin-top: 10px;
+    text-align: justify;
+    color: rgb(68, 67, 67);
+}
+.text__container .text{
+    padding: 0 20px;
+}
+.btn__container{
+    position: relative;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin: 20px 0px 0px 0px;
+}
+.btn__container .btn{
+    width: 150px;
+    height: 50px;
+    font-size: 1.3rem;
+    margin-right: 30px;
+    border: 2px solid #45985B;
+    background-color: #45985B;
+    color: #fff;
+}
+.btn__container__form .btn__form:hover{
+    cursor: pointer;
+}
+.btn__container .linear{
+    position: absolute;
+    height: 20px;
+    width: 70px;
+    border-right: 1px solid #45985B;
+    border-bottom: 1px solid #45985B;
+    top: 45px;
+    right: 20px;
+}
+.arrow__container{
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+/* Survey hero */
+.survey__container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: flex-start;
+    display: none;
+}
+.survey__container.active{
+    display: block;
+    display: flex;
+    justify-content: flex-end;
+    transition: all 1s ease-out;
+}
+.form__container{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    background-color: #fff;
+    flex-direction: column;
+    align-items: center;
+}
+.form__container .form__header{
+    display: flex;
+    width: 100%;
+    height: 15vh;
+    justify-content: space-between;
+    align-items: center;
+}
+.form__container .form__header .form__h2{
+    font-size: 2em;
+    font-weight: 300;
+    color: rgb(68, 67, 67);
+    display: flex;
+    width: 90%;
+    margin-left: 30px;
+}
+.form__ic{
+    width: 10%;
+}
+.form__ic:hover{
+    cursor: pointer;
+}
+.form__ic img{
+    width: 40px;
+    height: 40px;
+}
+.form__contents{
+    width: 90%;
+    height: 100vh;
+}
+.form__contents{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+.image__container__file{
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    color: rgb(68, 67, 67);
+}
+.image__loc{
+    height: 100%;
+    margin-left: 20px;
+}
+.form__contents input[type="text"]{
+    width: 600px;
+    height: 35px;
+    margin: 7px;
+    font-size: 1.3rem;
+    padding: 10px;
+    border: 1px solid rgb(68, 67, 67);
+    font-weight: 400;
+}
+.form__contents input[type=text]:focus {
+    border: 2px solid #45985B;
+}
+.form__contents input[type="email"]{
+    width: 600px;
+    height: 35px;
+    margin: 7px;
+    font-size: 1.3rem;
+    padding: 10px;
+    border: 1px solid rgb(68, 67, 67);
+    font-weight: 400;
+}
+.form__contents textarea{
+    width: 600px;
+    height: 60px;
+    margin: 7px;
+    font-size: 1.3rem;
+    border: 1px solid rgb(68, 67, 67);
+    font-weight: 400;
+    display: flex;
+    text-align: left;
+    padding: 10px;
+}
+.form__contents input[type="radio"]{
+    margin: 10px;
+    color: rgb(68, 67, 67);
+    font-weight: 400;
+    margin-left: 15px;
+}
+.recommend__text{
+    margin-left: 10px;
+    color: rgb(68, 67, 67);
+}
+.btn__container__form{
+    position: relative;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin: 20px 0px 0px 0px;
+}
+.btn__container__form .btn__form{ 
+    width: 150px;
+    height: 50px;
+    font-size: 1.3rem;
+    margin-right: 20px;
+    background-color: #45985B;
+    border: none;
+    color: #fff;
+}
+.btn__container .btn:hover{
+    cursor: pointer;
+}
+.linear{
+    position: absolute;
+    height: 20px;
+    width: 70px;
+    border-right: 1px solid #45985B;
+    border-bottom: 1px solid #45985B;
+    top: 45px;
+    right: 10px;
+}
